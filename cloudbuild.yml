@@ -1,0 +1,9 @@
+steps:
+ - name: 'gcr.io/cloud-builders/gcloud'
+   id: Connect to instance
+   entrypoint: /bin/sh
+   args:
+    - '-c'
+    - |
+     set -x && \\
+     gcloud compute ssh ecommerce-api --zone=asia-southeast1-b --command='/bin/sh /home/c663bsy4320/pull.sh'
